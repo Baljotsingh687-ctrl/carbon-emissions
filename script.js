@@ -295,6 +295,24 @@ function sixthPage() {
   box.appendChild(totalResult);
 }
 
+function seventhPage(){
+  let box = document.querySelector(".box");
+  box.innerText="";
+  let heading=document.createElement("h1");
+  heading.textContent="Suggestions to reduce Carbon Emissions";
+  box.appendChild(heading);
+  let suggestionsList=document.createElement("ul");
+  suggestionsList.innerHTML=`
+    <li>Use public transport or carpool to reduce travel emissions.</li>
+    <li>Switch to energy-efficient appliances and LED lighting.</li>
+    <li>Limit screen time and turn off devices when not in use.</li>
+    <li>Adopt a plant-based diet or reduce meat consumption.</li>
+    <li>Fix leaks and use water-saving fixtures to minimize water usage.</li>
+  `;
+  box.appendChild(suggestionsList);
+}
+
+
 
 
 
@@ -317,6 +335,7 @@ let pages = [
   fourthPage,
   fifthPage,
   sixthPage,
+  seventhPage
 ];
 let next = document.querySelector(".next");
 next.addEventListener("click", () => {
@@ -332,3 +351,4 @@ back.addEventListener("click", () => {
     pages[currentPage]();
   }
 });
+
